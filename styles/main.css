@@ -1,0 +1,177 @@
+:root {
+	--background-primary: #525252;
+	--book-item: #262626;
+	--header-color: #171717;
+	--font-color: white;
+	--background-index: 1;
+	--modal-index: 2;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	background: var(--background-primary);
+	min-height: 100vh;
+	color: var(--font-color);
+}
+
+/* Globals */
+
+.container {
+	max-width: 1200px;
+	padding: 0px 15px;
+}
+
+.hidden {
+	display: none;
+}
+
+.store-empty {
+	text-align: center;
+	color: red;
+}
+
+/* Globals */
+
+.header {
+	background: var(--header-color);
+	height: 100px;
+	width: 100%;
+	position: static;
+	padding: 0px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header > h1 {
+	color: inherit;
+}
+
+.books-wrapper {
+	margin-top: 30px;
+}
+
+.books-centered-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+/* Book Item */
+
+.book-item {
+	background: var(--book-item);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	padding: 15px;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.read-button {
+	margin-right: 10px;
+}
+
+
+/* Book Item */
+
+
+/* Modal For Books */
+
+
+.modal-form {
+	width: 400px;
+	background: #57534e;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: var(--modal-index);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.modal-close-button {
+	width: 60px;
+}
+
+
+/* Modal For Books */
+
+.add-book-button {
+	width: 100%;
+}
+
+.book-item-box {
+	display: flex;
+	align-items: center;	
+	justify-content: space-between;
+}
+
+
+
+/* background for modal */
+
+.background-for-modal {
+	background: #0a0a0a;
+	opacity: 0.7;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+.book-item-box > input {
+	outline: none;
+	padding: 0px 5px;
+	border: 2px solid green;
+}
+
+/* background for modal */
+
+
+
+
+
+
+
+
+
+
+
+/* Media Center */
+
+@media (max-width: 855px) {
+	.books-centered-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 460px) {
+	.books-centered-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.modal-form {
+		width: 100%;
+	}
+	.book-item-box {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.book-item-box > input {
+		width: 100%;
+	}
+}
+
+
+/* Media Center */
